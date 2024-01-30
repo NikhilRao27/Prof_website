@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +12,60 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         header {
             background-color: #6b5d5d;
             color: #fff;
             text-align: center;
             padding: 1em 0;
         }
+
         nav {
             background-color: #444;
             display: flex;
             justify-content: space-around;
             padding: 1em 0;
         }
+
         nav a {
             text-decoration: none;
             color: #fff;
             padding: 0.5em 1em;
             border-radius: 5px;
         }
+
         section {
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            text-align: left;
+            margin-left: 35px;
+            list-style-type: disc;
+        }
+
+        .year {
+            color: #e97070; /* Change this color for the year */
+        
+        }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -40,40 +74,53 @@
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Hello, I’m Dr. Raj Sethuraman</h1>
-    <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
-    <!--<p>Email: <a href="mailto:rsethura@cox.smu.edu">rsethura@cox.smu.edu</a></p></header -->
-    <p>Email: <a href="mailto:rsethura@cox.smu.edu" style="color: #11db4e;">rsethura@cox.smu.edu</a></p>
+    <header>
+        <h1>Hello, I’m Dr. Raj Sethuraman</h1>
+        <p>Professor and Harold Simmons Chair in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
+        <!--<p>Email: <a href="mailto:rsethura@cox.smu.edu">rsethura@cox.smu.edu</a></p></header -->
+        <p>Email: <a href="mailto:rsethura@cox.smu.edu" style="color: #11db4e;">rsethura@cox.smu.edu</a></p>
+    </header>
 
-
-
-    
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="AboutMe.html">About Me</a>
+    <nav>
+       
+    <a href="Index.html">Home</a>
     <a href="Teaching.html">Teaching</a>
     <a href="Research.html">Research</a>
     <a href="Awards.html">Awards</a>
-    <a href="#books">Books</a>
-    <a href="#consulting">Consulting</a>
-    <a href="#service">Service</a>
-    <a href="#contact">Contact Us</a>
-</nav>
+    <a href="Books.html">Books</a>
+    <a href="Talks.html">Talks </a>
+    <a href="Consulting.html">Consulting</a>
+    <a href="CharityWork.html">Charity Work</a>
+    <a href="Mentoring.html">Mentoring</a>
+    <a href="ContactUs.html">Contact Us</a>
+        
+    </nav>
 
-<section id="teaching">
-    <h2>Awards</h2>
-    
-</section>
+    <section id="Awards">
+        <img src="/images/awards/awards_image1.png" alt="Left Image">
+        <ul>
+            <li><span class="year">2022:</span> ISSN – World Research Council award for best research paper: assortment effect on sales</li>
+            <li><span class="year">2022:</span> William R. Davidson Award for the best paper in Journal of Retailing in 2021 (2nd place)</li>
+            <li><span class="year">2012:</span> Paul E. Green award for the best paper in the Journal of Marketing Research that demonstrates the greatest contribution to the practice of marketing (finalist)</li>
+            <li><span class="year">2010:</span> Outstanding Reviewer Award – Journal of Retailing</li>
+            <li><span class="year">2006:</span> Outstanding Reviewer Award – Journal of Retailing</li>
+            <li><span class="year">2004:</span> William R. Davidson Award for the best paper in Journal of Retailing (2nd place)</li>
+            <li><span class="year">2003:</span> Research Excellence Award, SMU Cox School of Business</li>
+            <li><span class="year">1999:</span> Sheth Foundation Award for the best article in Journal of the Academy of Marketing Science</li>
+            <li><span class="year">1997:</span> Citation of Excellence – Highest Quality Rating Award from ANBAR – a British Research Association that reviews articles from top journals</li>
+            <li><span class="year">1996:</span> John. D.C. Little award for the best marketing paper in Marketing Science/Management Science</li>
+            <li><span class="year">1996:</span> William F. O’Dell award for the best paper in Journal of Marketing Research that has made the greatest lasting contribution to the marketing literature over five years (Runner-up finalist)</li>
+        </ul>
+        <img src="/images/awards/awards_image2.png" alt="Right Image">
+    </section>
 
-
-<footer>
-    <p>&copy; 2024 - Dr. Raj Sethuraman. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 - Dr. Raj Sethuraman. All rights reserved.</p>
+    </footer>
 
 </body>
+
 </html>
