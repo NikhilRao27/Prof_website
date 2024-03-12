@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Dr. Raj Sethuraman</title>
+    <title>Home - Dr. Raj Sethuraman</title>
     <style>
         body {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
         }
+
         header {
             background-color: #6b5d5d;
             color: #fff;
             text-align: center;
-            padding: 1em 0;
+            padding: 0.5em 0;
         }
+
         nav {
             background-color: #444;
             display: flex;
             justify-content: space-around;
-            padding: 1em 0;
+            padding: 0.5em 0;
         }
+
         nav a {
             text-decoration: none;
             color: #fff;
@@ -47,17 +48,90 @@
             padding: 50px;
 
         }
-        p {
-            line-height: 1.6;
-            margin-top: 0;
+        .tree,
+.tree ul,
+.tree li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.tree {
+    margin: 0 0 1em;
+    text-align: center;
+}
+.tree,
+.tree ul {
+    display: table;
+}
+.tree ul {
+    width: 100%;
+}
+.tree li {
+    display: table-cell;
+    padding: .5em 0;
+    vertical-align: top;
+}
+.tree li:before {
+    outline: solid 1px #666;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.tree li:first-child:before {
+    left: 50%;
+}
+.tree li:last-child:before {
+    right: 50%;
+}
+.tree code,
+.tree span {
+    border: solid .1em #d6cfcf;
+    border-radius: .2em;
+    display: inline-block;
+    margin: 0 .2em .5em;
+    padding: .2em .2em;
+    position: relative;
+}
+.tree ul:before,
+.tree code:before,
+.tree span:before {
+    outline: solid 1px #666;
+    content: "";
+    height: .5em;
+    left: 50%;
+    position: absolute;
+}
+.tree ul:before {
+    top: -.5em;
+}
+.tree code:before,
+.tree span:before {
+    top: -.55em;
+}
+.tree>li {
+    margin-top: 0;
+}
+.tree>li:before,
+.tree>li:after,
+.tree>li>code:before,
+.tree>li>span:before {
+    outline: none;
+}
+.content {
+            text-align: center;
+            color:#76ABAE;
+            border-radius: 50%;
         }
-        #video-container {
-            flex: 1;
-            overflow: hidden;
+
+        .number {
+            font-size: 3em;
         }
-        iframe {
-            width: 90%;
-            height: 100%;
+
+        .text {
+            font-size: 1.5em;
         }
     </style>
 </head>
@@ -67,93 +141,135 @@
      <h1>Hello, I’m Dr. Raj Sethuraman</h1>
     <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
     <!--<p>Email: <a href="mailto:rsethura@cox.smu.edu">rsethura@cox.smu.edu</a></p></header -->
-    <p>Email: <a href="mailto:rsethura@cox.smu.edu" style="color: #11db4e;">rsethura@cox.smu.edu</a></p>
+    <p></p>
+    <p>If you wish to contact me, please send an email to<br/> Email: <a href="mailto:rsethura@cox.smu.edu" style="color: #becee4;">rsethura@cox.smu.edu</a></p>
 </header>
 
-<nav>
+
+    <nav>
     
-    <a href="index.html">Home</a>
-    <a href="Teaching.html">Teaching</a>
-    <a href="Research.html">Research</a>
-    <a href="Awards.html">Awards</a>
-    <a href="Books.html">Books</a>
-    <a href="Talks.html">Talks </a>
-    <a href="Consulting.html">Consulting</a>
-    <a href="CharityWork.html">Charity Work</a>
-    <a href="Mentoring.html">Mentoring</a>
-    <a href="ContactUs.html">Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="AboutME.html">About Me</a>
+        <a href="Teaching.html">Teaching</a>
+        <a href="Research.html">Research</a>
+        <a href="Awards.html">Awards</a>
+        <a href="Books.html">Books</a>
+        <a href="Talks.html">Talks </a>
+        <a href="Consulting.html">Consulting</a>
+        <a href="Fundraising.html">Fundraising</a>
+        <a href="CharityWork.html">Charity</a>
+        <a href="Mentoring.html">Mentoring</a>
+        <a href="ContactUs.html">Contact Us</a>
     
-</nav>
-
-<section>
-    <div id="text-container">
-        <div class="content">
-            <img fetchpriority="high" decoding="async" class="alignleft" src="ProfRajImage.png" width="196" ghthei="250">
-            <p>
-                I was born in Trichy, India. My father was an ex-serviceman (military veteran) who fought for the British during World War II in the 1940s.
-                As a result, I joined Sainik (military) school in India – a school for training military officers – at the young age of nine wanting to be a wing commander in the Air Force.
-                How I ended up from wanting to be an Air Force Officer in the Military to an Academic Professor in Marketing?
-                That story is told through a 5-min video interview by some of the young high school students I mentor – Special thanks to John Lenihan for videographing.
-            </p>
-
-            <p>
-                Lorem Ipsum comes from a latin text written in 45BC by Roman statesman, lawyer, scholar, and philosopher, Marcus Tullius Cicero. The text is titled "de Finibus Bonorum et Malorum" which means "The Extremes of Good and Evil". The most common form of Lorem ipsum is the following:
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-The text is a corrupted version of the original and therefore does not mean anything in particular. The book however where it originates discusses the philosophical views of Epicureanism, Stoicism, and the Platonism of Antiochus of Ascalon.
-
-Lorem ipsum is widely in use since the 14th century and up to today as the default dummy "random" text of the typesetting and web development industry. In fact not only it has survived the test of time but it thrived and can be found in many software products, from Microsoft Word to WordPress.
-
-
-            </p>
-        </div>
-      
-    
-    <style>
-        #text-container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    
-        .content {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box; /* Include padding in the element's total width and height */
-        }
-    
-        img {
-            max-width: 100%; /* Ensure the image does not exceed its container */
-            height: auto; /* Maintain aspect ratio */
-            margin-right: 20px; /* Add spacing between image and text */
-            float: left; /* Float the image to the left */
-        }
-    
-        p {
-            margin-top: 0; /* Remove top margin from paragraphs */
-        }
-    </style>
-    
-    
-
-    <div id="video-container">
-        <video width="900" height="500" controls muted autoplay>
-            <source src="NEW_YEAR.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    
-
-   <!--
-
-     <div id="video-container">
         
-        <iframe width="560"  height="500" src="NEW_YEAR.mp4" frameborder="0" allowfullscreen></iframe>
-    </div>
-   -->
-</section>
+    </nav>
+    
+    <body>
 
-<img src="images/about/flowchart.png" style="display: block; margin-left: auto; margin-right: auto">
+        <ul class="tree">
+            <li> <img src="ProfRajImage.png" alt="Raj Profile" style="height:200px;">
+                <h2> Engaged and passionate about </h2>
+                <ul>
+                    
+                        <ul>
+                            <li> <span> <h2>Academic Work </h2></span>
+                                <ul>
+                                    <li><span><h4>Teaching</h4></span>
+                                        <ul>
+                                            <li><span> <div class="content">
+                                                <div class="number">15</div>
+                                                <div class="text">Courses Taught</div>
+                                            </div></span></li>
+                                        </ul></li>
+
+                                       
+                                    <li><span><h4>Research</h4></span>
+                                    
+                                        <ul>
+                                            <li><span> <div class="content">
+                                                <div class="number">42</div>
+                                                <div class="text">Publications</div>
+                                            </div></span></li></span></li>
+                                        </ul></li>
+                                    
+                                    <li><span><h4>Service</h4></span>
+                                        <ul>
+                                            <li><span><div class="content">
+                                                <div class="number">11</div>
+                                                <div class="text">Years as dept chair</div>
+                                            </div></span></li></span></li>
+                                        </ul></li>
+                                </ul>
+                            </li>
+                            <li> <span> <h2>Corporate Connectivity</h2></span>
+                                <ul>
+                                    <li><span><h4>Books</h4></span>
+                                    
+                                        <ul>
+                                            <li><span><div class="content">
+                                                <div class="number">11</div>
+                                                <div class="text">Books and Cases</div>
+                                            </div></span></li></span></li>
+                                        </ul></li>
+                                    <li><span><h4>Talks</h4></span>
+                                        <ul>
+                                            <li><span> <div class="content">
+                                                <div class="number">70+</div>
+                                                <div class="text">Talks Given</div>
+                                            </div></span></li></span></li>
+                                        </ul></li>
+                                    <li><span><h4>Consulting</h4></span>
+                                        <ul>
+                                            <li><span><div class="content">
+                                                <div class="number">7</div>
+                                                <div class="text">Corporate Clients</div>
+                                            </div></span></li></span></li>
+                                        </ul></li>
+                                </ul>
+                            </li>
+                            <li> <span><h2>Giving Back</h2></span>
+                                <ul>
+                                    <li><span><h4>Fundraising</h4></span>
+                                        <ul>
+                                            <li><span> <div class="content">
+                                                <div class="number">100k+</div>
+                                                <div class="text">Dollars Raised</div>
+                                            </div></span></li></span></li>
+                                        </ul>
+                                    </li>
+                                    <li><span><h4>Charity</h4></span>
+                                        <ul>
+                                            <li><span> <div class="content">
+                                                <div class="number">12</div>
+                                                <div class="text">Nonprofits Helped</div>
+                                            </div></span></li></span></li>
+                                        </ul>
+                                    </li>
+                                    <li><span><h4>Mentoring</h4></span>
+                                        <ul>
+                                            <li><span> <div class="content">
+                                                <div class="number">13</div>
+                                                <div class="text">Students Guided</div>
+                                            </div></span></li></span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            
+        </ul>
+        <div style="text-align: center; padding-bottom: 10px;">
+            <a href="Resume/Vita Sethuraman.pdf" target="_blank">
+                <div style="background-color: rgb(13, 180, 202); width: 300px; height: 50px; line-height: 50px; border-radius: 5px; display: inline-block;">
+                    <span style="color: black; font-weight: bold;">Dr. Raj Sethuraman Resume</span>
+                </div>
+            </a>
+        </div>
+        
+        
+        
 
 <footer>
     <p>&copy; 2024 Dr. Raj Sethuraman. All rights reserved.</p>

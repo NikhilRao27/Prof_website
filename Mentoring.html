@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentoring - Dr. Raj Sethuraman</title>
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
+
         header {
             background-color: #6b5d5d;
             color: #fff;
             text-align: center;
-            padding: 1em 0;
+            padding: 0.5em 0;
         }
+
         nav {
             background-color: #444;
             display: flex;
             justify-content: space-around;
-            padding: 1em 0;
+            padding: 0.5em 0;
         }
+
         nav a {
             text-decoration: none;
             color: #fff;
@@ -30,8 +33,33 @@
             border-radius: 5px;
         }
         section {
-            padding: 20px;
+            padding: 5px;
         }
+        .italic {
+            font-style: italic;
+            color: #555;
+            font-size: 0.9em;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .team-member {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .team-member img { 
+            width: 100%;
+            height: 200px;
+            margin-bottom: 0px;
+        }
+        .name{
+            color: #76ABAE;
+            font-weight: bold;
+        }
+        
         footer {
             background-color: #333;
             color: #fff;
@@ -56,31 +84,94 @@
 <nav>
    
     <a href="index.html">Home</a>
-    <a href="Teaching.html">Teaching</a>
-    <a href="Research.html">Research</a>
-    <a href="Awards.html">Awards</a>
-    <a href="Books.html">Books</a>
-    <a href="Talks.html">Talks </a>
-    <a href="Consulting.html">Consulting</a>
-    <a href="CharityWork.html">Charity Work</a>
-    <a href="Mentoring.html">Mentoring</a>
-    <a href="ContactUs.html">Contact Us</a>
+        <a href="AboutME.html">About Me</a>
+        <a href="Teaching.html">Teaching</a>
+        <a href="Research.html">Research</a>
+        <a href="Awards.html">Awards</a>
+        <a href="Books.html">Books</a>
+        <a href="Talks.html">Talks </a>
+        <a href="Consulting.html">Consulting</a>
+        <a href="Fundraising.html">Fundraising</a>
+        <a href="CharityWork.html">Charity</a>
+        <a href="Mentoring.html">Mentoring</a>
+        <a href="ContactUs.html">Contact Us</a>
     
 </nav>
 
-<section id="MentoringExperience">
-    <h2>Mentoring Experience</h2>
-    <p>Over the past 30 years, i have provided mentorship to numerous undergraduate and graduate students in various capacities:</p>
+<section id="My Mentees">
+    <h2 style="text-align: center;">My Mentees</h2>
+    <p>As an instructor for over 30 years, I have had the pleasure of teaching hundreds of students and hired some of them as my teaching/research assistants. Beyond teaching and assistantship, 
+        I am pleased to have had the opportunity to advice/mentor the following students: </p>
 
-    <ul>
-        <li>Course instructor and coordinator</li>
-        <li>Department chair</li>
-        <li>Thesis committee member</li>
-        <li>Teaching/Research Assistant supervisor</li>
-        <li>And more</li>
-    </ul>
+    <h3>Ph.D. Students <span class="italic">(as coauthor, thesis committee member, research advisor)</span></h3>
+    <p class="collaborator">Suresh Diwaker, Doyle Kim, John Mittelstaedt</p>
 
-    <p>In 2022-23,i had the pleasure of mentoring high school students, teaching them about marketing, and guiding them through marketing projects.</p>
+    <h3>Masters Students <span class="italic">(as general advisor, help with startup)</span></h3>
+    <p class="collaborator">Vishal Ahuja, Bala Ganapathy, Madhuri Manjunath, Larissa Spies, Tegan Webster</p>
+
+    <h3>Undergrad/High-School Students <span class="italic">(as general advisor, recommender)</span></h3>
+    <p class="collaborator">Mahika Bansal, Arnav Lavanuru, Lakshana Nattamai, Laya Rajaram, Arvind Venkataraman</p>
+   
+
+</section>
+
+<section id="My mentors">
+    <h2 style="text-align: center;">My Mentors</h2>
+    <p>
+        Every mentor is also a mentee. During my formative years, and even now, I have been guided by many mentors who have directly or indirectly influenced me through their advice and critique. 
+        They have been instrumental in bringing out my best and I owe a big thanks to them!
+    </p>
+
+    <div class="flex-container">
+        <div class="team-member">
+            <img src="images/mentors/James_anderson.png" alt="James Anderson">
+            <p class="name">James Anderson</p>
+            <p class="relation">Faculty Advisor</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/mentors/Anne_coughlan.png" alt="Anne Coughlan">
+            <p class="name">Anne Coughlan</p>
+            <p class="relation">Thesis Advisor</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/mentors/Bill_Dillon.png" alt="Bill Dillon">
+            <p class="name">Bill Dillon</p>
+            <p class="relation">Academic Supervisor</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/mentors/Roger_kerin.png" alt="Roger Kerin">
+            <p class="name">Roger Kerin</p>
+            <p class="relation">Coauthor</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/mentors/Don_Lehmann.png" alt="Person 2">
+            <p class="name">Don Lehmann</p>
+            <p class="relation">Role Model</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/mentors/LouisSternANDPhilip.png" alt="Louis Stern & Philip Kotler">
+            <p class="name">Louis Stern & Philip Kotler</p>
+            <p class="relation">Kellogg Professors</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/mentors/SeenuSsrinivasan.png" alt="Seenu Srinivasan">
+            <p class="name">Seenu Srinivasan</p>
+            <p class="relation">Coauthor</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/mentors/GerryTellis.png" alt="Gerry Tellis">
+            <p class="name">Gerry Tellis</p>
+            <p class="relation">Coauthor</p>
+        </div>
+        
+
 </section>
 
 
