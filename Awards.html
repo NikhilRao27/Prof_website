@@ -37,41 +37,25 @@
         section {
             padding: 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        #topImages{
-
-            
-            justify-content: flex-start;
-            width: 20%;
-
-
-        }
-
-        section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
+            flex-direction: row; /* Change to column layout */
+            align-items: center; /* Center content horizontally */
+            text-align: center; /* Center text */
         }
 
         ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            text-align: center;
+            text-align: left; /* Align text left */
         }
 
         ul li {
             margin-bottom: 10px;
-            text-align: left;
-            margin-left: 35px;
             list-style-type: disc;
         }
 
         .year {
             color: #e97070; /* Change this color for the year */
-        
         }
 
         footer {
@@ -80,6 +64,70 @@
             text-align: center;
             padding: 1em 0;
         }
+
+        .slideshow-container {
+            width: 100%;
+            max-width: 400px; /* Adjust maximum width as needed */
+            margin: auto;
+            position: relative;
+            overflow: hidden; /* Ensure all images are within the container */
+            
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%; /* Ensure each slide takes full width */
+        }
+
+        .mySlides img {
+            width: 100%; /* Ensure each image takes full width of the slide */
+            height: auto;
+        }
+
+        /* Next and previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* Dots/Bullets */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
     </style>
 </head>
 
@@ -87,13 +135,12 @@
 
     <header>
         <h1>Hello, I’m Dr. Raj Sethuraman</h1>
-        <p>Professor and Harold Simmons Chair in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
-        <!--<p>Email: <a href="mailto:rsethura@cox.smu.edu">rsethura@cox.smu.edu</a></p></header -->
-        <p>Email: <a href="mailto:rsethura@cox.smu.edu" style="color: #11db4e;">rsethura@cox.smu.edu</a></p>
-    </header>
+       <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
+       <p></p>
+       <p>If you wish to contact me, please send an email to<br/><a href="mailto:rsethura@cox.smu.edu" style="color: #becee4;">rsethura@cox.smu.edu</a></p>
+   </header>
 
     <nav>
-       
         <a href="index.html">Home</a>
         <a href="AboutME.html">About Me</a>
         <a href="Teaching.html">Teaching</a>
@@ -105,35 +152,155 @@
         <a href="Fundraising.html">Fundraising</a>
         <a href="CharityWork.html">Charity</a>
         <a href="Mentoring.html">Mentoring</a>
-    
-        
     </nav>
 
-    <section id="topImages">
-        <img src="images/awards/Award_1999.jpg" alt="Left Image">
-        <img src="images/awards/Award_1999_2.jpg" alt="Left Image">
-        <img src="images/awards/Award_2004.jpg" alt="Left Image">
-        <img src="images/awards/Award_2006.jpg" alt="chairperson image">
-
-
-    </section>
-
     <section id="Awards">
-        <img src="images/awards/awards_image1.png" alt="Left Image">
-        <ul>
-            <li><span class="year">2022:</span> ISSN – World Research Council award for best research paper: assortment effect on sales</li>
-            <li><span class="year">2022:</span> William R. Davidson Award for the best paper in Journal of Retailing in 2021 (2nd place)</li>
-            <li><span class="year">2012:</span> Paul E. Green award for the best paper in the Journal of Marketing Research that demonstrates the greatest contribution to the practice of marketing (finalist)</li>
-            <li><span class="year">2010:</span> Outstanding Reviewer Award – Journal of Retailing</li>
-            <li><span class="year">2006:</span> Outstanding Reviewer Award – Journal of Retailing</li>
-            <li><span class="year">2004:</span> William R. Davidson Award for the best paper in Journal of Retailing (2nd place)</li>
-            <li><span class="year">2003:</span> Research Excellence Award, SMU Cox School of Business</li>
-            <li><span class="year">1999:</span> Sheth Foundation Award for the best article in Journal of the Academy of Marketing Science</li>
-            <li><span class="year">1997:</span> Citation of Excellence – Highest Quality Rating Award from ANBAR – a British Research Association that reviews articles from top journals</li>
-            <li><span class="year">1996:</span> John. D.C. Little award for the best marketing paper in Marketing Science/Management Science</li>
-            <li><span class="year">1996:</span> William F. O’Dell award for the best paper in Journal of Marketing Research that has made the greatest lasting contribution to the marketing literature over five years (Runner-up finalist)</li>
-        </ul>
-        <img src="images/awards/awards_image2.png" alt="Right Image">
+        <div>
+            <ul>
+                <li><span class="year">2022:</span> ISSN – World Research Council award for best research paper: assortment
+                    effect on sales</li>
+                <li><span class="year">2022:</span> William R. Davidson Award for the best paper in Journal of Retailing in
+                    2021 (2nd place)</li>
+                <li><span class="year">2012:</span> Paul E. Green award for the best paper in the Journal of Marketing
+                    Research that demonstrates the greatest contribution to the practice of marketing (finalist)</li>
+                <li><span class="year">2010:</span> Outstanding Reviewer Award – Journal of Retailing</li>
+                <li><span class="year">2006:</span> Outstanding Reviewer Award – Journal of Retailing</li>
+                <li><span class="year">2004:</span> William R. Davidson Award for the best paper in Journal of Retailing
+                    (2nd place)</li>
+                <li><span class="year">2003:</span> Research Excellence Award, SMU Cox School of Business</li>
+                <li><span class="year">1999:</span> Sheth Foundation Award for the best article in Journal of the Academy of
+                    Marketing Science</li>
+                <li><span class="year">1997:</span> Citation of Excellence – Highest Quality Rating Award from ANBAR – a
+                    British Research Association that reviews articles from top journals</li>
+                <li><span class="year">1996:</span> John. D.C. Little award for the best marketing paper in Marketing
+                    Science/Management Science</li>
+                <li><span class="year">1996:</span> William F. O’Dell award for the best paper in Journal of Marketing
+                    Research that has made the greatest lasting contribution to the marketing literature over five years
+                    (Runner-up finalist)</li>
+            </ul>
+        </div>
+
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides">
+                <img src="images/awards/awards_image1.png" alt="Left Image">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/awards_image2.png" alt="Right Image">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0811.png" alt="Left Image">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0813.png" alt="Image 1">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0814.png" alt="Image 2">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0815.png" alt="Image 3">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0816.png" alt="Image 4">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0817.png" alt="Image 5">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0818.png" alt="Image 6">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0819.png" alt="Image 7">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0820.png" alt="Image 8">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0821.png" alt="Image 9">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0822.png" alt="Image 10">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0823.png" alt="Image 11">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0824.png" alt="Image 12">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0825.png" alt="Image 13">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0826.png" alt="Image 14">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0827.png" alt="Image 15">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0828.png" alt="Image 16">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0829.png" alt="Image 17">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0830.png" alt="Image 18">
+            </div>
+
+            <!-- Previous and Next Buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- Dots/Bullets -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <!-- Add more spans for additional images if needed -->
+        </div>
+
+        <script>
+            var slideIndex = 1; // Start from the first slide
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { // If we reach the end, start from the beginning
+                    slideIndex = 1;
+                }
+                if (n < 1) { // If we go back from the first slide, go to the last one
+                    slideIndex = slides.length;
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+
+            // Set timeout for automatic slide change
+            var timeoutID;
+            function startTimer() {
+                timeoutID = setTimeout(function() {
+                    plusSlides(1);
+                    startTimer();
+                }, 2000); // Change image every 2 seconds
+            }
+            startTimer();
+        </script>
     </section>
 
     <footer>

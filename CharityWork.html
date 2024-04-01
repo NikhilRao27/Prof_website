@@ -32,16 +32,46 @@
             padding: 0.5em 1em;
             border-radius: 5px;
         }
-        section {
+        .container{
+            display: flex;
+        }
+        .column{
+            flex: 1;
             padding: 5px;
+            text-align: center;
+        }
+        .column:first-child{
+            flex: 0 0 30%;
+            
+        }
+        .column:nth-child(2){
+            flex: 0 0 40%;
+        }
+        .column:last-child{
+            flex: 0 0 30%;   
+        }
+        
+        .column:nth-child(2) .subcolumn {
+        display: flex;
+          justify-content: space-between;
+        }
+        .column img{
+            padding-bottom: 0px;
+            padding-right: 0px;
         }
 
-        .top-images{
-            display: flex;
-             
-            justify-content: space-around;
-            width: 100%;
-        }
+        .column:nth-child(2) .subcolumn img {
+       width: 40%;
+      max-width: 100%; /* Ensure images don't exceed 100% of their container */
+   
+      }
+    
+        
+
+
+       
+            
+
        
         footer {
             background-color: #333;
@@ -53,16 +83,12 @@
 </head>
 <body>
 
-<header>
-    <h1>Hello, I’m Dr. Raj Sethuraman</h1>
-    <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
-    <!--<p>Email: <a href="mailto:rsethura@cox.smu.edu">rsethura@cox.smu.edu</a></p></header -->
-    <p>Email: <a href="mailto:rsethura@cox.smu.edu" style="color: #11db4e;">rsethura@cox.smu.edu</a></p>
-
-
-
-    
-</header>
+    <header>
+        <h1>Hello, I’m Dr. Raj Sethuraman</h1>
+       <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
+       <p></p>
+       <p>If you wish to contact me, please send an email to<br/><a href="mailto:rsethura@cox.smu.edu" style="color: #becee4;">rsethura@cox.smu.edu</a></p>
+   </header>
 
 <nav>
   
@@ -85,34 +111,36 @@
     <p style="text-align: center;">Providing Food and Education to Poor Children Around the Globe</p>
 
   
-    <div class="image-layout">
-        <div class="top-images">
-            <img src="images/Charity/AimForSeva.png" alt="Top Image 1" class="image">
-            <img src="images/Charity/AmericanRedCross.png" alt="Top Image 2" class="image">
-            <img src="images/Charity/CityOfAllen.png" alt="Top Image 3" class="image">
-            <img src="images/Charity/AkshayaPatra.png" alt="Top Image 4" class="image">
-        </div>
-        
-        <div class="side-images">
-            <img src="images/left1.jpg" alt="Left Image 1" class="image">
-            <img src="images/left2.jpg" alt="Left Image 2" class="image">
-        </div>
-        
-        <div class="main-image">
-            <img src="images/main.jpg" alt="Main Image" class="image">
-        </div>
-        
-        <div class="side-images">
-            <img src="images/right1.jpg" alt="Right Image 1" class="image">
-            <img src="images/right2.jpg" alt="Right Image 2" class="image">
-        </div>
-    </div>
+    <div class="container">
 
-        
-       
-      
+        <div class="column">
+            <img src="images/Charity/AimForSeva.png" alt="Aim for seva logo" class="image">
+            <img src="images/Charity/Asha.png" alt="Asha for education" class="image">
+            <img src="images/Charity/ChildrenAdvocacyCenter.png" alt="CHild Care Advocacy" class="image">
+            <img src="images/Charity/PlanoINdependent.png" alt="Plano Independent school district" class="image">
+            <img src="images/Charity/NorthTExasFOod.png" alt="North texas food bank" class="image">
+        </div>
 
-       
+        <div class="column">
+            <div class="subcolumn">
+                <img src="images/Charity/AmericanRedCross.png" alt="Top Image 2" class="image">
+                <img src="images/Charity/CityOfAllen.png" alt="Top Image 3" class="image">
+
+            </div>
+           
+            <img src="images/Charity/ChaartDonation.png" alt="Top Image 3" class="image">
+            
+
+        </div>
+
+        <div class="column">
+            <img src="images/Charity/AkshayaPatra.png" alt="Top Image 4" class="image" style="padding-top: 10px;">
+            <img src="images/Charity/Pratham.png" alt="Top Image 4" class="image" style="padding-top: 10px;">
+            <img src="images/Charity/Sivananda.png" alt="Top Image 4" class="image" style="padding-top: 10px;">
+            <img src="images/Charity/Vibha.png" alt="Top Image 4" class="image" style="padding-top: 10px;">
+            <img src="images/Charity/AIDINDIA.png" alt="Top Image 4" class="image" style="padding-top: 10px;">
+        </div>
+    </div>     
 </section>
 
 

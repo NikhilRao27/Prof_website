@@ -32,39 +32,40 @@
             padding: 0.5em 1em;
             border-radius: 5px;
         }
+
         section {
             padding: 20px;
         }
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px; /* Add some margin for spacing */
-        }
+
         .flex-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             margin-bottom: 0px;
-            margin-left: 6cap;
         }
 
-       
-            .flex-container div {
+        .flex-container div {
             margin: 0 10px 20px 0px;
-            width: 30%; /* Set the width to 30% for three images in a row */
+            width: calc(33.33% - 20px); /* Adjusted width for three images in a row with margin */
             border-radius: 8px;
-            overflow: hidden; /* Hide overflowing content */
-}
+            overflow: hidden;
+        }
 
-        
+        .flex-container div img {
+            width: 100%;
+            height: auto;
+        }
 
+        .center-text {
+            text-align: center;
+            margin-bottom: 20px; /* Add some space below the text */
+        }
 
-        
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            
+            padding: 1em 0;
         }
     </style>
 </head>
@@ -72,20 +73,18 @@
 
 <header>
     <h1>Hello, I’m Dr. Raj Sethuraman</h1>
-    <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
-    <!--<p>Email: <a href="mailto:rsethura@cox.smu.edu">rsethura@cox.smu.edu</a></p></header -->
+    <p>Professor and Harold Simmons Chair in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
     <p>Email: <a href="mailto:rsethura@cox.smu.edu" style="color: #11db4e;">rsethura@cox.smu.edu</a></p>
 </header>
 
 <nav>
-  
     <a href="index.html">Home</a>
     <a href="AboutME.html">About Me</a>
     <a href="Teaching.html">Teaching</a>
     <a href="Research.html">Research</a>
     <a href="Awards.html">Awards</a>
     <a href="Books.html">Books</a>
-    <a href="Talks.html">Talks </a>
+    <a href="Talks.html">Talks</a>
     <a href="Consulting.html">Consulting</a>
     <a href="Fundraising.html">Fundraising</a>
     <a href="CharityWork.html">Charity</a>
@@ -93,43 +92,31 @@
 </nav>
 
 <section id="Consulting">
-    
-    
-    <h3 style="text-align: left; margin-left: 42pc;">Ad-hoc Consultant for the following Organizations</h3>
-
-
-   <section id="Case Study">
-        <div class="flex-container">
-            <div>
-                
+    <h3 class="center-text">Ad-hoc Consultant for the following Organizations</h3>
+    <div class="flex-container">
+        <div>
             <img src="images/consulting_comp/consulting_george_bush.png" alt="Image 1">
-
-                 
-            </div>
-            <div>
-                <img src="images/consulting_comp/consulting_quest.png" alt="Image 2">
-            </div>
-            <div>
-                <img src="images/consulting_comp/consulting_centre_for_np.png" alt="Image 3">
-            </div>
-            
-            <div>
-                <img src="images/consulting_comp/consulting_samsung.png" alt="Image 4">
-            </div>
-
-            <div>
-                <img src="images/consulting_comp/consul.png" alt="Highland park united methodist church" >
-            </div>
-            <div>
-                <img src="images/consulting_comp/consulting_kpmg.png" alt="Image 5">
-            </div>
-            <div>
-                <img src="images/consulting_comp/Anheuser_Bursh.png" alt="Image 3" >
-            </div>
-           
         </div>
+        <div>
+            <img src="images/consulting_comp/consulting_quest.png" alt="Image 2">
+        </div>
+        <div>
+            <img src="images/consulting_comp/consulting_centre_for_np.png" alt="Image 3">
+        </div>
+        <div>
+            <img src="images/consulting_comp/consulting_samsung.png" alt="Image 4">
+        </div>
+        <div>
+            <img src="images/consulting_comp/consul.png" alt="Highland park united methodist church">
+        </div>
+        <div>
+            <img src="images/consulting_comp/consulting_kpmg.png" alt="Image 5">
+        </div>
+        <div>
+            <img src="images/consulting_comp/Anheuser_Bursh.png" alt="Image 3">
+        </div>
+    </div>
 </section>
-
 
 <footer>
     <p>&copy; 2024 - Dr. Raj Sethuraman. All rights reserved.</p>
