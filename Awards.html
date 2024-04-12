@@ -16,10 +16,21 @@
         header {
             background-color: #6b5d5d;
             color: #fff;
-            text-align: center;
+            
             padding: 0.5em 0;
+            display: flex;
+            align-items: center;
+          justify-content: center;
+           margin-top: 20px;
         }
-
+        .headText{
+            text-align: center;
+        }
+        .headimage{
+            border-radius: 50%; /* Make the image round */
+             width: auto;
+        }
+        
         nav {
             background-color: #444;
             display: flex;
@@ -134,24 +145,31 @@
 <body>
 
     <header>
-        <h1>Hello, I’m Dr. Raj Sethuraman</h1>
-       <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
-       <p></p>
-       <p>If you wish to contact me, please send an email to<br/><a href="mailto:rsethura@cox.smu.edu" style="color: #becee4;">rsethura@cox.smu.edu</a></p>
-   </header>
+        <div class="headimage">
+            <img src="ProfRajImage.png" alt="Raj Profile" style="height: 160px; padding-right: 50px;"> 
+        </div>
+        <div class="headText">
+            <h1 style="font-size: 35px;">Hello, I’m Dr. Raj Sethuraman</h1>
+            <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
+            <p></p>
+            <p>If you wish to contact me, please send an email to<br/><a href="mailto:rsethura@cox.smu.edu" style="color: #becee4;">rsethura@cox.smu.edu</a></p>
+        </div>
+        
+    </header>
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="AboutME.html">About Me</a>
-        <a href="Teaching.html">Teaching</a>
-        <a href="Research.html">Research</a>
-        <a href="Awards.html">Awards</a>
-        <a href="Books.html">Books</a>
-        <a href="Talks.html">Talks </a>
-        <a href="Consulting.html">Consulting</a>
-        <a href="Fundraising.html">Fundraising</a>
-        <a href="CharityWork.html">Charity</a>
-        <a href="Mentoring.html">Mentoring</a>
+    <a href="AboutME.html">About Me</a>
+    <a href="Teaching.html">Teaching</a>
+    <a href="Research.html">Research</a>
+    <a href="Service.html">Service</a>
+    <a href="Awards.html">Awards</a>
+    <a href="Books.html">Books</a>
+    <a href="Talks.html">Talks </a>
+    <a href="Consulting.html">Consulting</a>
+    <a href="Fundraising.html">Fundraising</a>
+    <a href="CharityWork.html">Charity</a>
+    <a href="Mentoring.html">Mentoring</a> 
     </nav>
 
     <section id="Awards">
@@ -182,12 +200,7 @@
 
         <div class="slideshow-container">
             <!-- Slides -->
-            <div class="mySlides">
-                <img src="images/awards/awards_image1.png" alt="Left Image">
-            </div>
-            <div class="mySlides">
-                <img src="images/awards/awards_image2.png" alt="Right Image">
-            </div>
+            
             <div class="mySlides">
                 <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0811.png" alt="Left Image">
             </div>
@@ -260,47 +273,27 @@
         </div>
 
         <script>
-            var slideIndex = 1; // Start from the first slide
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) { // If we reach the end, start from the beginning
-                    slideIndex = 1;
-                }
-                if (n < 1) { // If we go back from the first slide, go to the last one
-                    slideIndex = slides.length;
-                }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-            }
-
-            // Set timeout for automatic slide change
-            var timeoutID;
-            function startTimer() {
-                timeoutID = setTimeout(function() {
-                    plusSlides(1);
-                    startTimer();
-                }, 2000); // Change image every 2 seconds
-            }
-            startTimer();
-        </script>
+            </script>
+        
     </section>
 
     <footer>
