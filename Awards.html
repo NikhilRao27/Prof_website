@@ -73,7 +73,7 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 1em 0;
+            padding: em 0;
         }
 
         .slideshow-container {
@@ -92,7 +92,8 @@
 
         .mySlides img {
             width: 100%; /* Ensure each image takes full width of the slide */
-            height: auto;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Next and previous buttons */
@@ -124,16 +125,7 @@
         }
 
         /* Dots/Bullets */
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
+       
 
         .active,
         .dot:hover {
@@ -202,97 +194,115 @@
             <!-- Slides -->
             
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0811.png" alt="Left Image">
+                <img src="images/awards/edited/2022_RPSIG.jpg" alt="Left Image">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0813.png" alt="Image 1">
+                <img src="images/awards/edited/2021_JR_WDA.jpg" alt="Image 1">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0814.png" alt="Image 2">
+                <img src="images/awards/edited/2021_ACRA.jpg" alt="Image 2">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0815.png" alt="Image 3">
+                <img src="images/awards/edited/2019_RTLC.jpg" alt="Image 3">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0816.png" alt="Image 4">
+                <img src="images/awards/edited/2018_IFDW.jpg" alt="Image 4">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0817.png" alt="Image 5">
+                <img src="images/awards/edited/2017-2022_JR.jpg" alt="Image 5">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0818.png" alt="Image 6">
+                <img src="images/awards/edited/2014_GL.jpg" alt="Image 6">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0819.png" alt="Image 7">
+                <img src="images/awards/edited/2010_JR.jpg" alt="Image 7">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0820.png" alt="Image 8">
+                <img src="images/awards/edited/2009-2010_SMUCOX.jpg" alt="Image 8">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0821.png" alt="Image 9">
+                <img src="images/awards/edited/2006_SMU.jpg" alt="Image 9">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0822.png" alt="Image 10">
+                <img src="images/awards/edited/2006_JR.jpg" alt="Image 10">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0823.png" alt="Image 11">
+                <img src="images/awards/edited/2004_JR_WDA.jpg" alt="Image 11">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0824.png" alt="Image 12">
+                <img src="images/awards/edited/2003_SMUCOX.jpg" alt="Image 12">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0825.png" alt="Image 13">
+                <img src="images/awards/edited/2002-2007_MS.jpg" alt="Image 13">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0826.png" alt="Image 14">
+                <img src="images/awards/edited/1999_CG.jpg" alt="Image 14">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0827.png" alt="Image 15">
+                <img src="images/awards/edited/1999_AMSC.jpg" alt="Image 15">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0828.png" alt="Image 16">
+                <img src="images/awards/edited/1995_IORMS.jpg" alt="Image 16">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0829.png" alt="Image 17">
+                <img src="images/awards/edited/1987_NYU.jpg" alt="Image 17">
             </div>
             <div class="mySlides">
-                <img src="images/awards/Dr Raj Sethuraman Awards/IMG_0830.png" alt="Image 18">
+                <img src="images/awards/edited/DFW_IMA.JPEG" alt="Image 18">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/edited/RAJ_MAHAL.jpg" alt="Image 18">
+            </div>
+            <div class="mySlides">
+                <img src="images/awards/edited/SMUCOX.jpg" alt="Image 18">
             </div>
 
-            <!-- Previous and Next Buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
+        <!-- Previous and Next Buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
 
-        <!-- Dots/Bullets -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <!-- Add more spans for additional images if needed -->
-        </div>
+    <!-- Dots/Bullets -->
+   
 
-        <script>
-            let slideIndex = 0;
-            showSlides();
-            
-            function showSlides() {
-              let i;
-              let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              slideIndex++;
-              if (slideIndex > slides.length) {slideIndex = 1}    
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-              setTimeout(showSlides, 2000); // Change image every 2 seconds
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-            </script>
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides(),2000); // Change image every 2 seconds
+        }
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    </script>
+
+</section>
+
         
     </section>
 
