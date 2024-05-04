@@ -16,19 +16,20 @@
         header {
             background-color: #6b5d5d;
             color: #fff;
-            
             padding: 0.5em 0;
             display: flex;
             align-items: center;
-          justify-content: center;
-           margin-top: 20px;
+            justify-content: center;
+            margin-top: 20px;
         }
-        .headText{
+
+        .headText {
             text-align: center;
         }
-        .headimage{
+
+        .headimage {
             border-radius: 50%; /* Make the image round */
-             width: auto;
+            width: auto;
         }
 
         nav {
@@ -44,22 +45,52 @@
             padding: 0.5em 1em;
             border-radius: 5px;
         }
-        section {
-            padding: 20px;
-            text-align: center;
-        }
+
+        
 
         ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            text-align: left;
+            text-align: center;
+            
         }
 
         ul li {
             margin-bottom: 10px;
-            margin-left: 40%;
             list-style-type: disc;
+            text-align: left;
+            
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 20px auto;
+            
+        }
+        .image-container{
+            width: 30%;
+            
+        }
+        .image-container img {
+            height: 600px;
+            
+            width: auto;
+            max-width: 100%; /* Ensure images don't exceed container width */
+            
+        }
+
+        .text-body{
+            padding-left: 100px;
+        }
+           
+        
+
+        .text-container {
+            width: 40%; /* Adjust the width as needed */
+            flex-grow: 1; /* Allow the text container to grow to fill the available space */
         }
 
         footer {
@@ -101,30 +132,51 @@
     </nav>
 
     <section id="Talks">
-        <h2 style="text-align: center;">Talks</h2>
-        <h4 style="text-align: center;">Recent Invited Talks, Presentations, Workshop, and Keynote</h4>
-        <ul>
-            <li>2023 FORE Institute, Delhi, India</li>
-            <li>2022 Jio Institute, Mumbai, India</li>
-            <li>2021 FORE International Marketing Conference, Delhi, India</li>
-            <li>2021 New Castle University, UK</li>
-            <li>2021 Flame University, Pune, India</li>
-            <li>2021 Birla Institute of Management and Technology, India</li>
-            <li>2021 American Collegiate Retailing Association</li>
-            <li>2021 McGill University, Canada</li>
-            <li>2020 Birla Institute of Management Technology Retail Summit, India</li>
-            <li>2019 Wharton Marketing Seminar, University of Pennsylvania, Philadelphia</li>
-            <li>2019 Italian Marketing Conference, Piacenza, Italy</li>
-            <li>2019 Symbiosis Institute, Pune, India</li>
-            <li>2019 KU Leuven Retail Research Conference, Leuven, Belgium</li>
-            <li>2018 Indian Institute of Management, Bangalore, India</li>
-            <li>2018 Faculty development workshop – Jindal Institute, New Delhi, India</li>
-            <li>2018 Syracuse University, Syracuse, USA</li>
-            <li>2018 Advances in National Brand and Private Label Marketing, Barcelona, Spain</li>
-            <li>2016 Center for Innovation and Entrepreneurship, Chennai, India</li>
-            <li>2016 University of Texas, Arlington, USA</li>
-            <li>1989–2015 Over 60 invited talks and conference presentations</li>
-        </ul>
+        <div class="container">
+
+        
+        <div class="image-container">
+            <div>
+                <img src="images/talks/2014_GL_edited.jpg" alt="Left Image">
+            </div>
+        </div>
+            <div class="text-container">
+                <h2 style="text-align: center;">Talks</h2>
+                <h4 style="text-align: center;">Recent Invited Talks, Presentations, Workshop, and Keynote</h4>
+                <div class="text-body">
+                    <ul>
+                        <li>2023 FORE Institute, Delhi, India</li>
+                        <li>2022 Jio Institute, Mumbai, India</li>
+                        <li>2021 FORE International Marketing Conference, Delhi, India</li>
+                        <li>2021 New Castle University, UK</li>
+                        <li>2021 Flame University, Pune, India</li>
+                        <li>2021 Birla Institute of Management and Technology, India</li>
+                        <li>2021 American Collegiate Retailing Association</li>
+                        <li>2021 McGill University, Canada</li>
+                        <li>2020 Birla Institute of Management Technology Retail Summit, India</li>
+                        <li>2019 Wharton Marketing Seminar, University of Pennsylvania, Philadelphia</li>
+                        <li>2019 Italian Marketing Conference, Piacenza, Italy</li>
+                        <li>2019 Symbiosis Institute, Pune, India</li>
+                        <li>2019 KU Leuven Retail Research Conference, Leuven, Belgium</li>
+                        <li>2018 Indian Institute of Management, Bangalore, India</li>
+                        <li>2018 Faculty development workshop – Jindal Institute, New Delhi, India</li>
+                        <li>2018 Syracuse University, Syracuse, USA</li>
+                        <li>2018 Advances in National Brand and Private Label Marketing, Barcelona, Spain</li>
+                        <li>2016 Center for Innovation and Entrepreneurship, Chennai, India</li>
+                        <li>2016 University of Texas, Arlington, USA</li>
+                        <li>1989–2015 Over 60 invited talks and conference presentations</li>
+                    </ul>
+
+                </div>
+                
+            </div>  
+            <div class="image-container">
+                <div>
+                    <img src="images/talks/2014_GL.jpg" alt="Left Image">
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
 
     <footer>
@@ -134,4 +186,3 @@
 </body>
 
 </html>
-
