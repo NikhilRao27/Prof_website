@@ -63,12 +63,15 @@
 
         .image-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 20px;
+    height: 600px;
 }
 
 .image-container img {
     max-width: calc(30% - 10px); /* 30% width with margin */
+    padding-right: 30px;
+    height: 100%;
     
     
 }
@@ -78,6 +81,14 @@
     max-width: calc(40% - 20px); /* 40% width with margin */
     
 
+    @media screen and (max-width: 600px) {
+    .image-container {
+        flex-direction: column; /* Change to vertical layout */
+        height: auto; /* Reset height */
+    }
+
+   
+}
 }
 
        
