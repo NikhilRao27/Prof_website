@@ -15,23 +15,26 @@
         header {
             background-color: #6b5d5d;
             color: #fff;
-            
             padding: 0.5em 0;
             display: flex;
             align-items: center;
-          justify-content: center;
-           margin-top: 20px;
+            justify-content: center;
+            margin-top: 20px;
         }
-        .headText{
+
+        .headText {
             text-align: center;
         }
-        .headimage{
+
+        .headimage {
             border-radius: 50%; /* Make the image round */
-             width: auto;
+            width: auto;
         }
+
         nav {
             background-color: #444;
             display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap when needed */
             justify-content: space-around;
             padding: 0.5em 0;
         }
@@ -41,6 +44,7 @@
             color: #fff;
             padding: 0.5em 1em;
             border-radius: 5px;
+            margin: 5px; /* Add margin between nav items */
         }
 
         section {
@@ -77,22 +81,34 @@
             text-align: center;
             padding: 1em 0;
         }
+
+        /* Media query for collapsing navigation */
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="headimage">
-            <img src="ProfRajImage.png" alt="Raj Profile" style="height: 160px; padding-right: 50px;"> 
-        </div>
-        <div class="headText">
-            <h1 style="font-size: 35px;">Hello, I’m Dr. Raj Sethuraman</h1>
-            <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
-            <p></p>
-            <p>If you wish to contact me, please send an email to<br/><a href="mailto:rsethura@cox.smu.edu" style="color: #becee4;">rsethura@cox.smu.edu</a></p>
-        </div>
-        
-    </header>
+<header>
+    <div class="headimage">
+        <img src="ProfRajImage.png" alt="Raj Profile" style="height: 160px; padding-right: 50px;"> 
+    </div>
+    <div class="headText">
+        <h1 style="font-size: 35px;">Hello, I’m Dr. Raj Sethuraman</h1>
+        <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
+        <p></p>
+        <p>If you wish to contact me, please send an email to<br/><a href="mailto:rsethura@cox.smu.edu" style="color: #becee4;">rsethura@cox.smu.edu</a></p>
+    </div>
+    
+</header>
 
 <nav>
     <a href="index.html">Home</a>

@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            
             background-color: #f4f4f4;
         }
 
@@ -68,6 +69,7 @@
         .year {
             color: #e97070; /* Change this color for the year */
         }
+        
 
         footer {
             background-color: #333;
@@ -78,7 +80,7 @@
 
         .slideshow-container {
             width: 100%;
-            max-width: 400px; /* Adjust maximum width as needed */
+            max-width: 500px; /* Adjust maximum width as needed */
             margin: auto;
             position: relative;
             overflow: hidden; /* Ensure all images are within the container */
@@ -91,9 +93,9 @@
         }
 
         .mySlides img {
-            width: 100%; /* Ensure each image takes full width of the slide */
-            height: 100%;
-            object-fit: cover;
+            width:auto; /* Ensure each image takes full width of the slide */
+            height: 500px;
+            object-fit: contain;
         }
 
         /* Next and previous buttons */
@@ -124,7 +126,15 @@
             border-radius: 3px 0 0 3px;
         }
 
-        /* Dots/Bullets */
+        @media only screen and (max-width: 600px) {
+            section {
+                flex-direction: column;
+            }
+
+            .slideshow-container {
+                width: 80%;
+            }
+        }
        
 
         .active,
@@ -194,70 +204,70 @@
             <!-- Slides -->
             
             <div class="mySlides">
-                <img src="images/awards/edited/2022_RPSIG.jpg" alt="Left Image">
+                <img src="images/awards/edited/2022_RPSIG.jpg" alt="i1">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2021_JR_WDA.jpg" alt="Image 1">
+                <img src="images/awards/edited/2021_JR_WDA.jpg" alt="Image 2">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2021_ACRA.jpg" alt="Image 2">
+                <img src="images/awards/edited/2021_ACRA.jpg" alt="Image 3">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2019_RTLC.jpg" alt="Image 3">
+                <img src="images/awards/edited/2019_RTLC.jpg" alt="Image 4">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2018_IFDW.jpg" alt="Image 4">
+                <img src="images/awards/edited/2018_IFDW.jpg" alt="Image 5">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2017-2022_JR.jpg" alt="Image 5">
+                <img src="images/awards/edited/2017-2022_JR.jpg" alt="Image 6">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2014_GL.jpg" alt="Image 6">
+                <img src="images/awards/edited/2014_GL.jpg" alt="Image 7">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2010_JR.jpg" alt="Image 7">
+                <img src="images/awards/edited/2010_JR.jpg" alt="Image 8">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2009-2010_SMUCOX.jpg" alt="Image 8">
+                <img src="images/awards/edited/2009-2010_SMUCOX.jpg" alt="Image 9">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2006_SMU.jpg" alt="Image 9">
+                <img src="images/awards/edited/2006_SMU.jpg" alt="Image 10">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2006_JR.jpg" alt="Image 10">
+                <img src="images/awards/edited/2006_JR.jpg" alt="Image 11">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2004_JR_WDA.jpg" alt="Image 11">
+                <img src="images/awards/edited/2004_JR_WDA.jpg" alt="Image 12">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2003_SMUCOX.jpg" alt="Image 12">
+                <img src="images/awards/edited/2003_SMUCOX.jpg" alt="Image 13">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/2002-2007_MS.jpg" alt="Image 13">
+                <img src="images/awards/edited/2002-2007_MS.jpg" alt="Image 14">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/1999_CG.jpg" alt="Image 14">
+                <img src="images/awards/edited/1999_CG.jpg" alt="Image 15">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/1999_AMSC.jpg" alt="Image 15">
+                <img src="images/awards/edited/1999_AMSC.jpg" alt="Image 16">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/1995_IORMS.jpg" alt="Image 16">
+                <img src="images/awards/edited/1995_IORMS.jpg" alt="Image 17">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/1987_NYU.jpg" alt="Image 17">
+                <img src="images/awards/edited/1987_NYU.jpg" alt="Image 18">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/DFW_IMA.JPEG" alt="Image 18">
+                <img src="images/awards/edited/DFW_IMA.JPEG" alt="Image 19">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/RAJ_MAHAL.jpg" alt="Image 18">
+                <img src="images/awards/edited/RAJ_MAHAL.jpg" alt="Image 20">
             </div>
             <div class="mySlides">
-                <img src="images/awards/edited/SMUCOX.jpg" alt="Image 18">
+                <img src="images/awards/edited/SMUCOX.jpg" alt="Image 21">
             </div>
 
-        </div>
+        
         <!-- Previous and Next Buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -274,33 +284,22 @@
         function showSlides() {
             let i;
             let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slideIndex++;
             if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                slideIndex = 1;
             }
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides,2000); // Change image every 2 seconds
+            setTimeout(showSlides, 3500); // Change image every 3 seconds
         }
 
         // Next/previous controls
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
     </script>
-
 
 
         
