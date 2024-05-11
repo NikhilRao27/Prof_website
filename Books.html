@@ -19,7 +19,7 @@
             display: flex;
             align-items: center;
           justify-content: center;
-           margin-top: 20px;
+           margin-top: 0px;
         }
         .headText{
             text-align: center;
@@ -67,22 +67,20 @@
             margin-right: 10px; /* Add some spacing between logos */
         }
         .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-bottom: 0px;
-            margin-left: 150px;
-        }
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    justify-content: center; /* Center items horizontally */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
 
-        .flex-container div {
-            flex: 1;
-            margin: 0 10px 20px 0px;
-            flex-basis: calc(25% - 20px); /* Adjust the width and margin as needed */
-            max-width: 30%; /* Adjust the width as needed */
-            border-radius: 8px;
-            overflow: hidden; /* Hide overflowing content */
-        }
-
+.flex-container div {
+    flex-basis: calc(25% - 20px); /* Adjust the width and margin as needed */
+    max-width: 30%; /* Adjust the width as needed */
+    margin: 0 10px 20px 0px; /* Adjust margin */
+    border-radius: 8px;
+    overflow: hidden; /* Hide overflowing content */
+}
         
         footer {
             background-color: #333;
@@ -110,19 +108,11 @@
             nav.expanded a {
                 display: block;
             }
-            .flex-container {
-        display: flex;
-        flex-wrap: wrap; /* Enable wrapping for smaller screens */
-        justify-content: center; /* Center items horizontally */
-        margin: 0; /* Remove margin */
-        padding: 0; /* Remove padding */
+            .flex-container div {
+             flex-basis: calc(50% - 20px); /* Two items per row on smaller screens */
+           max-width: 50%; /* Two items per row on smaller screens */
     }
-
-    .flex-container div {
-        flex-basis: calc(50% - 20px); /* Two items per row on smaller screens */
-        max-width: 50%; /* Two items per row on smaller screens */
-        margin: 0 0 20px 0; /* Adjust margin to remove space between rows */
-    }
+            
         }
 
         /* Hide toggle button when screen width is greater than 768px */
@@ -231,3 +221,4 @@
 </body>
 
 </html>
+
