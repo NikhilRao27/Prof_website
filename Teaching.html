@@ -33,6 +33,7 @@
         nav {
             background-color: #444;
             display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap when needed */
             justify-content: space-around;
             padding: 0.5em 0;
         }
@@ -42,6 +43,7 @@
             color: #fff;
             padding: 0.5em 1em;
             border-radius: 5px;
+            margin: 5px; /* Add margin between nav items */
         }
         
         footer {
@@ -90,6 +92,48 @@
    
 }
 }
+@media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            #nav-toggle {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 1.5em;
+                margin-right: auto; /* Move toggle button to the left */
+            }
+
+            nav.expanded a {
+                display: block;
+            }
+            .image-container {
+        flex-direction: column; /* Change to vertical layout */
+        height: auto; /* Reset height */
+    }
+
+    .image-container img {
+        max-width: calc(100% - 20px); /* Adjust image width */
+        margin-bottom: 20px; /* Add margin between images */
+    }
+
+    /* Adjust the width of the second image */
+    .image-container img:nth-child(2) {
+        max-width: calc(100% - 20px); /* Adjust width to fit container */
+    }
+        }
+
+        /* Hide toggle button when screen width is greater than 768px */
+        @media screen and (min-width: 769px) {
+            #nav-toggle {
+                display: none;
+            }
+        }
 
        
     </style>
@@ -110,7 +154,7 @@
     </header>
     
     <nav>
-
+        <a id="nav-toggle" href="#">&#9776;</a> <!-- Three-lines icon -->
         <a href="index.html">Home</a>
         <a href="AboutME.html">About Me</a>
         <a href="Teaching.html">Teaching</a>
@@ -123,9 +167,7 @@
         <a href="Fundraising.html">Fundraising</a>
         <a href="CharityWork.html">Charity</a>
         <a href="Mentoring.html">Mentoring</a> 
-    
     </nav>
-
     <section id="teaching">
         <h2>Teaching</h2>
         <p>Given my background in engineering, work experience with Exxon, Ph.D thesis on branding, and 
@@ -144,5 +186,16 @@
     </footer>
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.querySelector('nav');
+
+        // Toggle the nav menu when the toggle button is clicked
+        navToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('expanded');
+        });
+    });
+</script>
 
 </html>

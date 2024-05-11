@@ -33,6 +33,7 @@
         nav {
             background-color: #444;
             display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap when needed */
             justify-content: space-around;
             padding: 0.5em 0;
         }
@@ -42,6 +43,7 @@
             color: #fff;
             padding: 0.5em 1em;
             border-radius: 5px;
+            margin: 5px; /* Add margin between nav items */
         }
         section {
             padding: 20px;
@@ -55,6 +57,34 @@
             color: #fff;
             text-align: center;
             padding: 1em 0;
+        }
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            #nav-toggle {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 1.5em;
+                margin-right: auto; /* Move toggle button to the left */
+            }
+
+            nav.expanded a {
+                display: block;
+            }
+        }
+
+        /* Hide toggle button when screen width is greater than 768px */
+        @media screen and (min-width: 769px) {
+            #nav-toggle {
+                display: none;
+            }
         }
     </style>
 </head>

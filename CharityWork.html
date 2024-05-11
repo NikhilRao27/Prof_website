@@ -15,19 +15,18 @@
         header {
             background-color: #6b5d5d;
             color: #fff;
-            
             padding: 0.5em 0;
             display: flex;
             align-items: center;
-          justify-content: center;
-           margin-top: 20px;
+            justify-content: center;
+            margin-top: 20px;
         }
-        .headText{
+        .headText {
             text-align: center;
         }
-        .headimage{
-            border-radius: 50%; /* Make the image round */
-             width: auto;
+        .headimage {
+            border-radius: 50%; 
+            width: auto;
         }
         nav {
             background-color: #444;
@@ -44,6 +43,8 @@
         }
         .container{
             display: flex;
+            flex-wrap: wrap; /* Allow items to wrap */
+            justify-content: center; /* Center items horizontally */
         }
         .column{
             flex: 1;
@@ -66,24 +67,36 @@
         }
         
         .column:nth-child(2) .subcolumn {
-        display: flex;
-        justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
         }
         .column img{
             padding-bottom: 0px;
             padding-right: 0px;
+            max-width: 100%; /* Ensure images don't exceed 100% of their container */
         }
 
         .column:nth-child(2) .subcolumn img {
-       width: 40%;
-      max-width: 100%; /* Ensure images don't exceed 100% of their container */
-   
-      }   
+            width: 40%;
+        }   
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1em 0;
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Change flex direction to column */
+                align-items: center; /* Center items vertically */
+            }
+            .column {
+                width: 100%; /* Each column takes full width */
+                max-width: none; /* Remove max-width */
+                margin-bottom: 20px; /* Add some spacing between columns */
+            }
         }
     </style>
 </head>
@@ -122,17 +135,12 @@
     <h2 style="text-align: center;">12 Non-Profits Supported through CHAART</h2>
     <p style="text-align: center;">Providing Food and Education to Poor Children Around the Globe</p>
 
-  
     <div class="container">
-
         <div class="column">
             <img src="images/Charity/AimForSeva.png" alt="Aim for seva logo" class="image">
             <img src="images/Charity/Asha.png" alt="Asha for education" class="image">
-            <img src="images/Charity/ChildrenAdvocacyCenter.png" alt="CHild Care Advocacy" class="image">
+            <img src="images/Charity/ChildrenAdvocacyCenter.png" alt="Child Care Advocacy" class="image">
             <img src="images/Charity/PlanoINdependent.png" alt="Plano Independent school district" class="image">
-           <!--not required any more
-                 <img src="images/Charity/NorthTExasFOod.png" alt="North texas food bank" class="image">
-           --> 
         </div>
         <div class="column">
             <div class="subcolumn">
@@ -141,7 +149,6 @@
             </div>
             <img src="images/Charity/ChaartDonation.png" alt="Top Image 3" class="image">
         </div>
-
         <div class="column">
             <img src="images/Charity/AkshayaPatra.png" alt="Top Image 4" class="image" style="padding-top: 10px;">
             <img src="images/Charity/Pratham.png" alt="Top Image 4" class="image" style="padding-top: 10px;">
@@ -151,9 +158,6 @@
         </div>
     </div>     
 </section>
-
-
-
 
 <footer>
     <p>&copy; 2024 - Dr. Raj Sethuraman. All rights reserved.</p>

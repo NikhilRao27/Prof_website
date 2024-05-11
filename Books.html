@@ -32,6 +32,7 @@
         nav {
             background-color: #444;
             display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap when needed */
             justify-content: space-around;
             padding: 0.5em 0;
         }
@@ -41,6 +42,7 @@
             color: #fff;
             padding: 0.5em 1em;
             border-radius: 5px;
+            margin: 5px; /* Add margin between nav items */
         }
         section {
             padding: 20px;
@@ -88,6 +90,49 @@
             text-align: center;
             padding: 1em 0;
         }
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            #nav-toggle {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 1.5em;
+                margin-right: auto; /* Move toggle button to the left */
+            }
+
+            nav.expanded a {
+                display: block;
+            }
+            .flex-container {
+        display: flex;
+        flex-wrap: wrap; /* Enable wrapping for smaller screens */
+        justify-content: center; /* Center items horizontally */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+    }
+
+    .flex-container div {
+        flex-basis: calc(50% - 20px); /* Two items per row on smaller screens */
+        max-width: 50%; /* Two items per row on smaller screens */
+        margin: 0 0 20px 0; /* Adjust margin to remove space between rows */
+    }
+        }
+
+        /* Hide toggle button when screen width is greater than 768px */
+        @media screen and (min-width: 769px) {
+            #nav-toggle {
+                display: none;
+            }
+            
+        }
+        
     </style>
 </head>
 <body>
@@ -105,21 +150,21 @@
         
     </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="AboutME.html">About Me</a>
-    <a href="Teaching.html">Teaching</a>
-    <a href="Research.html">Research</a>
-    <a href="Service.html">Service</a>
-    <a href="Awards.html">Awards</a>
-    <a href="Books.html">Books</a>
-    <a href="Talks.html">Talks </a>
-    <a href="Consulting.html">Consulting</a>
-    <a href="Fundraising.html">Fundraising</a>
-    <a href="CharityWork.html">Charity</a>
-    <a href="Mentoring.html">Mentoring</a> 
-
-</nav>
+    <nav>
+        <a id="nav-toggle" href="#">&#9776;</a> <!-- Three-lines icon -->
+        <a href="index.html">Home</a>
+        <a href="AboutME.html">About Me</a>
+        <a href="Teaching.html">Teaching</a>
+        <a href="Research.html">Research</a>
+        <a href="Service.html">Service</a>
+        <a href="Awards.html">Awards</a>
+        <a href="Books.html">Books</a>
+        <a href="Talks.html">Talks </a>
+        <a href="Consulting.html">Consulting</a>
+        <a href="Fundraising.html">Fundraising</a>
+        <a href="CharityWork.html">Charity</a>
+        <a href="Mentoring.html">Mentoring</a> 
+    </nav>
 
 <section id="Books">
    
@@ -167,3 +212,22 @@
         </div>
      </section>
 
+
+    <footer>
+        <p>&copy; 2024 - Dr. Raj Sethuraman. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navToggle = document.getElementById('nav-toggle');
+            var navMenu = document.querySelector('nav');
+    
+            // Toggle the nav menu when the toggle button is clicked
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('expanded');
+            });
+        });
+    </script>
+</body>
+
+</html>

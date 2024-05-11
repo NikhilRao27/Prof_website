@@ -31,6 +31,7 @@
         nav {
             background-color: #444;
             display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap when needed */
             justify-content: space-around;
             padding: 0.5em 0;
         }
@@ -38,8 +39,9 @@
         nav a {
             text-decoration: none;
             color: #fff;
-            padding: 0.5em 0em;
+            padding: 0.5em 1em;
             border-radius: 5px;
+            margin: 5px; /* Add margin between nav items */
         }
         section {
             display: flex;
@@ -66,8 +68,10 @@
         }
         .container {
             display: flex;
-            flex: 1;
-            height: auto; /* Full height of viewport */
+            flex-direction: row; /* Default to row layout */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .left,
@@ -80,6 +84,7 @@
             text-align: center; /* Added */
             
         }
+        
 
         .middle {
             flex: 1; /* Takes remaining space */
@@ -88,6 +93,21 @@
             align-items: center;
            text-align: center;
             flex-direction: column;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Change to column layout for smaller screens */
+            }
+            .left,
+            .right {
+                width: 100%; /* Full width for left and right on smaller screens */
+                margin-bottom: 20px; /* Add margin between images */
+            }
+
+            .middle {
+                width: 100%; /* Full width for middle on smaller screens */
+            }
         }
     </style>
 </head>
@@ -105,20 +125,21 @@
         </div>
     </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="AboutME.html">About Me</a>
-    <a href="Teaching.html">Teaching</a>
-    <a href="Research.html">Research</a>
-    <a href="Service.html">Service</a>
-    <a href="Awards.html">Awards</a>
-    <a href="Books.html">Books</a>
-    <a href="Talks.html">Talks </a>
-    <a href="Consulting.html">Consulting</a>
-    <a href="Fundraising.html">Fundraising</a>
-    <a href="CharityWork.html">Charity</a>
-    <a href="Mentoring.html">Mentoring</a>  
-</nav>
+    <nav>
+        <a id="nav-toggle" href="#">&#9776;</a> <!-- Three-lines icon -->
+        <a href="index.html">Home</a>
+        <a href="AboutME.html">About Me</a>
+        <a href="Teaching.html">Teaching</a>
+        <a href="Research.html">Research</a>
+        <a href="Service.html">Service</a>
+        <a href="Awards.html">Awards</a>
+        <a href="Books.html">Books</a>
+        <a href="Talks.html">Talks </a>
+        <a href="Consulting.html">Consulting</a>
+        <a href="Fundraising.html">Fundraising</a>
+        <a href="CharityWork.html">Charity</a>
+        <a href="Mentoring.html">Mentoring</a> 
+    </nav>
 
 <section>
     
@@ -170,6 +191,16 @@
 <footer>
     <p>&copy; 2024 Dr. Raj Sethuraman. All rights reserved.</p>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.querySelector('nav');
 
+        // Toggle the nav menu when the toggle button is clicked
+        navToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('expanded');
+        });
+    });
+</script>
 </body>
 </html>

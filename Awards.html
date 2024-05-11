@@ -35,6 +35,7 @@
         nav {
             background-color: #444;
             display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap when needed */
             justify-content: space-around;
             padding: 0.5em 0;
         }
@@ -44,6 +45,7 @@
             color: #fff;
             padding: 0.5em 1em;
             border-radius: 5px;
+            margin: 5px; /* Add margin between nav items */
         }
 
         section {
@@ -141,6 +143,34 @@
         .dot:hover {
             background-color: #717171;
         }
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            #nav-toggle {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 1.5em;
+                margin-right: auto; /* Move toggle button to the left */
+            }
+
+            nav.expanded a {
+                display: block;
+            }
+        }
+
+        /* Hide toggle button when screen width is greater than 768px */
+        @media screen and (min-width: 769px) {
+            #nav-toggle {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -160,7 +190,8 @@
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+    <a id="nav-toggle" href="#">&#9776;</a> <!-- Three-lines icon -->
+    <a href="index.html">Home</a>
     <a href="AboutME.html">About Me</a>
     <a href="Teaching.html">Teaching</a>
     <a href="Research.html">Research</a>
@@ -172,8 +203,7 @@
     <a href="Fundraising.html">Fundraising</a>
     <a href="CharityWork.html">Charity</a>
     <a href="Mentoring.html">Mentoring</a> 
-    </nav>
-
+</nav>
     <section id="Awards">
         <div>
             <ul>
@@ -221,9 +251,7 @@
             <div class="mySlides">
                 <img src="images/awards/edited/2017-2022_JR.jpg" alt="Image 6">
             </div>
-            <div class="mySlides">
-                <img src="images/awards/edited/2014_GL.jpg" alt="Image 7">
-            </div>
+           
             <div class="mySlides">
                 <img src="images/awards/edited/2010_JR.jpg" alt="Image 8">
             </div>
@@ -260,12 +288,7 @@
             <div class="mySlides">
                 <img src="images/awards/edited/DFW_IMA.JPEG" alt="Image 19">
             </div>
-            <div class="mySlides">
-                <img src="images/awards/edited/RAJ_MAHAL.jpg" alt="Image 20">
-            </div>
-            <div class="mySlides">
-                <img src="images/awards/edited/SMUCOX.jpg" alt="Image 21">
-            </div>
+           
 
         
         <!-- Previous and Next Buttons -->
@@ -309,6 +332,17 @@
         <p>&copy; 2024 - Dr. Raj Sethuraman. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navToggle = document.getElementById('nav-toggle');
+            var navMenu = document.querySelector('nav');
+    
+            // Toggle the nav menu when the toggle button is clicked
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('expanded');
+            });
+        });
+    </script>
 </body>
 
 </html>

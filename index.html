@@ -10,31 +10,31 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            
-            
         }
 
         header {
             background-color: #6b5d5d;
             color: #fff;
-            
             padding: 0.5em 0;
             display: flex;
             align-items: center;
-          justify-content: center;
-           margin-top: 20px;
+            justify-content: center;
+            margin-top: 20px;
         }
-        .headText{
+
+        .headText {
             text-align: center;
         }
-        .headimage{
+
+        .headimage {
             border-radius: 50%; /* Make the image round */
-             width: auto;
+            width: auto;
         }
-        
+
         nav {
             background-color: #444;
             display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap when needed */
             justify-content: space-around;
             padding: 0.5em 0;
         }
@@ -44,144 +44,84 @@
             color: #fff;
             padding: 0.5em 1em;
             border-radius: 5px;
+            margin: 5px; /* Add margin between nav items */
         }
+
         section {
-            display: flex;
-            flex-wrap: wrap;
             padding: 20px;
         }
-        .chart{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            
+
+        .chart ul {
+            padding-left: 20px;
+            list-style-type: none;
         }
+
+        .chart ul ul {
+            display: none;
+        }
+
+        .chart li {
+            cursor: pointer;
+        }
+
+        .chart h2 {
+            font-size: 1.2em;
+            color: #d6370f;
+            margin: 10px 0;
+        }
+
+        .chart h4 {
+            font-size: 1em;
+            color: #5311ce;
+            margin: 5px 0;
+        }
+
+        .content {
+            text-align: center;
+            color: #5311ce;
+            background-color: #dddf9a;
+        }
+
+        .number {
+            font-size: 2em;
+        }
+
+        .text {
+            font-size: 1em;
+        }
+
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1em 0;
         }
-        #text-container {
-            flex: 1;
-            padding: 50px;
 
+        @media screen and (max-width: 768px) {
+            .chart ul ul {
+                display: block;
+            }
         }
-        .tree,
-.tree ul,
-.tree li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-.tree {
-    margin: 0 0 1em;
-    text-align: center;
-}
-.tree,
-.tree ul {
-    display: table;
-}
-.tree ul {
-    width: 100%;
-}
-.tree li {
-    display: table-cell;
-    padding: .5em 0;
-    vertical-align: top;
-}
-.tree li:before {
-    outline: solid 1px #666;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.tree li:first-child:before {
-    left: 50%;
-}
-.tree li:last-child:before {
-    right: 50%;
-}
-.tree code,
-.tree span {
-    border: solid .1em #d6cfcf;
-    border-radius: .2em;
-    display: inline-block;
-    margin: 0 .2em .5em;
-    padding: .2em .2em;
-    position: relative;
-}
-.tree ul:before,
-.tree code:before,
-.tree span:before {
-    outline: solid 1px #666;
-    content: "";
-    height: .5em;
-    left: 50%;
-    position: absolute;
-}
-.tree ul:before {
-    top: -.5em;
-}
-.tree code:before,
-.tree span:before {
-    top: -.55em;
-}
-.tree>li {
-    margin-top: 0;
-}
-.tree>li:before,
-.tree>li:after,
-.tree>li>code:before,
-.tree>li>span:before {
-    outline: none;
-}
-.content {
-            text-align: center;
-            color:#5311ce;
-            background-color: #dddf9a;
-        }
-
-        .number {
-            font-size: 3em;
-        }
-
-        .text {
-            font-size: em;
-        }
-        .tree li > span > h2 {
-            color: #5311ce;
-            font-weight: bold;
-             /* Change to your desired color */
-        }
-        .tree li > ul > li > span > h4 {
-            color: #d6370f; /* Change to your desired color */
-        }
-
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="headimage">
-            <img src="ProfRajImage.png" alt="Raj Profile" style="height: 160px; padding-right: 50px;"> 
-        </div>
-        <div class="headText">
-            <h1 style="font-size: 35px;">Hello, I’m Dr. Raj Sethuraman</h1>
-            <p>Professor and Harold Simmons Chair  in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
-            <p></p>
-            <p>If you wish to contact me, please send an email to<br/><a href="mailto:rsethura@cox.smu.edu" style="color: #becee4;">rsethura@cox.smu.edu</a></p>
-        </div>
-        
-    </header>
+<header>
+    <div class="headimage">
+        <img src="ProfRajImage.png" alt="Raj Profile" style="height: 160px; padding-right: 50px;">
+    </div>
+    <div class="headText">
+        <h1 style="font-size: 35px;">Hello, I’m Dr. Raj Sethuraman</h1>
+        <p>Professor and Harold Simmons Chair in Marketing <br>SMU-Cox School of Business <br>Dallas, Texas, USA</p>
+        <p></p>
+        <p>If you wish to contact me, please send an email to<br/><a href="mailto:rsethura@cox.smu.edu"
+                                                                 style="color: #becee4;">rsethura@cox.smu.edu</a></p>
+    </div>
+</header>
 
-
-    <nav>
-    
-        <a href="index.html">Home</a>
+<nav>
+    <a id="nav-toggle" href="#">&#9776;</a> <!-- Three-lines icon -->
+    <a href="index.html">Home</a>
     <a href="AboutME.html">About Me</a>
     <a href="Teaching.html">Teaching</a>
     <a href="Research.html">Research</a>
@@ -192,124 +132,162 @@
     <a href="Consulting.html">Consulting</a>
     <a href="Fundraising.html">Fundraising</a>
     <a href="CharityWork.html">Charity</a>
-    <a href="Mentoring.html">Mentoring</a> 
-        
-    </nav>
-      
-    <body>
-        <div class="chart">
+    <a href="Mentoring.html">Mentoring</a>
+</nav>
 
-        
-
-        <ul class="tree">
-            <li> 
-                <h2 style="font-size: 30px; color: #d6370f;"> Engaged and Passionate about </h2>
+<section>
+    <div class="chart">
+        <ul>
+            <li>
+                <h2>Engaged and Passionate about</h2>
                 <ul>
-                    
+                    <li>
+                        <h4>Academic Work</h4>
                         <ul>
-                            <li> <span> <h2>Academic Work </h2></span>
+                            <li>
+                                <h4>Teaching</h4>
                                 <ul>
-                                    <li><span><h4>Teaching</h4></span>
-                                        <ul>
-                                            <li><span> <div class="content">
-                                                <div class="number">15</div>
-                                                <div class="text">Courses Taught</div>
-                                            </div></span></li>
-                                        </ul></li>
-
-                                       
-                                    <li><span><h4>Research</h4></span>
-                                    
-                                        <ul>
-                                            <li><span> <div class="content">
-                                                <div class="number">42</div>
-                                                <div class="text">Publications</div>
-                                            </div></span></li></span></li>
-                                        </ul></li>
-                                    
-                                    <li><span><h4>Service</h4></span>
-                                        <ul>
-                                            <li><span><div class="content">
-                                                <div class="number">11</div>
-                                                <div class="text">Years as dept chair</div>
-                                            </div></span></li></span></li>
-                                        </ul></li>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">15</div>
+                                            <div class="text">Courses Taught</div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
-                            <li> <span> <h2>Corporate Connectivity</h2></span>
+                            <li>
+                                <h4>Research</h4>
                                 <ul>
-                                    <li><span><h4>Books</h4></span>
-                                    
-                                        <ul>
-                                            <li><span><div class="content">
-                                                <div class="number">11</div>
-                                                <div class="text">Books and Cases</div>
-                                            </div></span></li></span></li>
-                                        </ul></li>
-                                    <li><span><h4>Talks</h4></span>
-                                        <ul>
-                                            <li><span> <div class="content">
-                                                <div class="number">70</div>
-                                                <div class="text">Talks Given</div>
-                                            </div></span></li></span></li>
-                                        </ul></li>
-                                    <li><span><h4>Consulting</h4></span>
-                                        <ul>
-                                            <li><span><div class="content">
-                                                <div class="number">7</div>
-                                                <div class="text">Corporate Clients</div>
-                                            </div></span></li></span></li>
-                                        </ul></li>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">42</div>
+                                            <div class="text">Publications</div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
-                            <li> <span><h2>Giving Back</h2></span>
+                            <li>
+                                <h4>Service</h4>
                                 <ul>
-                                    <li><span><h4>Fundraising</h4></span>
-                                        <ul>
-                                            <li><span> <div class="content">
-                                                <div class="number">100K</div>
-                                                <div class="text">Dollars Raised</div>
-                                            </div></span></li></span></li>
-                                        </ul>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">11</div>
+                                            <div class="text">Years as dept chair</div>
+                                        </div>
                                     </li>
-                                    <li><span><h4>Charity</h4></span>
-                                        <ul>
-                                            <li><span> <div class="content">
-                                                <div class="number">12</div>
-                                                <div class="text">Nonprofits Helped</div>
-                                            </div></span></li></span></li>
-                                        </ul>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Corporate Connectivity</h4>
+                        <ul>
+                            <li>
+                                <h4>Books</h4>
+                                <ul>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">11</div>
+                                            <div class="text">Books and Cases</div>
+                                        </div>
                                     </li>
-                                    <li><span><h4>Mentoring</h4></span>
-                                        <ul>
-                                            <li><span> <div class="content">
-                                                <div class="number">13</div>
-                                                <div class="text">Students Guided</div>
-                                            </div></span></li></span></li>
-                                        </ul>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Talks</h4>
+                                <ul>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">70</div>
+                                            <div class="text">Talks Given</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Consulting</h4>
+                                <ul>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">7</div>
+                                            <div class="text">Corporate Clients</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Giving Back</h4>
+                        <ul>
+                            <li>
+                                <h4>Fundraising</h4>
+                                <ul>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">100K</div>
+                                            <div class="text">Dollars Raised</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Charity</h4>
+                                <ul>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">12</div>
+                                            <div class="text">Nonprofits Helped</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Mentoring</h4>
+                                <ul>
+                                    <li>
+                                        <div class="content">
+                                            <div class="number">13</div>
+                                            <div class="text">Students Guided</div>
+                                        </div>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                 </ul>
-            
+            </li>
         </ul>
     </div>
-        <div style="text-align: center; padding-bottom: 10px;">
-            <a href="Resume/Vita Sethuraman.pdf" target="_blank">
-                <div style="background-color: rgb(13, 180, 202); width: 300px; height: 50px; line-height: 50px; border-radius: 5px; display: inline-block;">
-                    <span style="color: black; font-weight: bold;">Dr. Raj Sethuraman Resume</span>
-                </div>
-            </a>
-        </div>
-        
-        
-        
+</section>
 
 <footer>
     <p>&copy; 2024 Dr. Raj Sethuraman. All rights reserved.</p>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.querySelector('nav');
+
+        // Toggle the nav menu when the toggle button is clicked
+        navToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('expanded');
+        });
+
+        // Add event listeners to collapse and expand tree nodes
+        var treeNodes = document.querySelectorAll('.chart li');
+        treeNodes.forEach(function (node) {
+            node.addEventListener('click', function () {
+                this.classList.toggle('expanded');
+                var childNodes = this.querySelectorAll('ul');
+                childNodes.forEach(function (childNode) {
+                    childNode.style.display = childNode.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
